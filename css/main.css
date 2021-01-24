@@ -1,0 +1,40 @@
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas: "navbar navbar" "titular titular" "simulador__Preguntas simulador__Resultado" "footer footer";
+  background-color: white; }
+
+.navbar {
+  grid-area: navbar;
+  height: 100px;
+  background-color: red; }
+
+.titular {
+  grid-area: titular;
+  height: 200px;
+  color: white;
+  background-color: #645d5d; }
+
+.simulador {
+  display: flex;
+  justify-content: space-between; }
+
+.simulador__Preguntas {
+  grid-area: simulador__Preguntas;
+  height: 400px;
+  color: red;
+  padding: 20px; }
+
+.simulador__Resultado {
+  grid-area: simulador__Resultado;
+  height: 400px;
+  color: red;
+  padding: 20px; }
+
+.pieDePag {
+  grid-area: footer;
+  height: 150px; }
