@@ -1,26 +1,5 @@
 
 
-// function Auto(marca, modelo, anio, estado, precio){
-//     this.marca = marca;
-//     this.modelo = modelo;
-//     this.anio = anio;
-//     this.estado = estado;
-//     this.precio = precio;
-// }
-
-// function AutoEnCarrito (marca, modelo, precio){
-//     this.marca = marca;
-//     this.modelo = modelo;
-//     this.precio = precio;
-// }
-
-// let autosEnStock = [
-//     FordFocus = new Auto ('Ford', 'Focus', 2021, '0km', '$5000'),
-//     ChevroletPrisma = new Auto ('Chevrolet', 'Prisma', 2019, '15mil Kilómetros', '$4000'),
-//     VWGol = new Auto ('Volskwagen', 'Gol', 2018, '77mil Kilómetros', '4500'),
-//     VWAmarok = new Auto ('Volkwagen', 'Amarok', 2020, '56mil Kilómetros', '$10.000')
-// ]
-
 
 // Selecciono la clase del botón de cada card y/o producto
 let addToShoppingCartButtons = document.querySelectorAll ('.addToCart');
@@ -30,6 +9,9 @@ addToShoppingCartButtons.forEach(addToCartButton => {
     addToCartButton.addEventListener('click', addToCartClicked)
 });
 
+let shoppingCartItemsContainer = document.querySelector (
+    'shoppingCartItemsContainer'
+    );
 
 // Tomo el evento anterior, lo guardo en una variable y luego traigo todos los items cercanos con el método closest
 function addToCartClicked (event) {
@@ -45,8 +27,33 @@ function addToCartClicked (event) {
 }
 
 function addItemToShoopingCart(itemTitle, itemPrice, itemImage) {
-    console.log(itemTitle, itemPrice, itemImage)
-    
+   let shoppingCartRow = document.createElement('div');
+   let shoppingCartContent = `
+   <div class="row shoppingCartItem">
+        <div class="col-6">
+        <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+            <img src=${itemImage} class="shopping-cart-image">
+            <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemTitle}
+            </h6>
+        </div>
+        </div>
+        <div class="col-2">
+        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+            <p class="item-price mb-0 shoppingCartItemPrice">${itemPrice}</p>
+        </div>
+        </div>
+        <div class="col-4">
+        <div
+            class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+            <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                value="1">
+            <button class="btn btn-danger buttonDelete" type="button">X</button>
+        </div>
+        </div>
+    </div>
+    `;
+    shoppingCartRow.innerHTML = shoppingCartContent;
+    shoppingCartItemsContainer.append(shoppingCartRow); 
 }
 
 
