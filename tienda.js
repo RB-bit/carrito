@@ -11,7 +11,7 @@ addToShoppingCartButtons.forEach(addToCartButton => {
 
 let shoppingCartItemsContainer = document.querySelector (
     'shoppingCartItemsContainer'
-    );
+);
 
 // Tomo el evento anterior, lo guardo en una variable y luego traigo todos los items cercanos con el método closest
 function addToCartClicked (event) {
@@ -50,10 +50,10 @@ function addItemToShoopingCart(itemTitle, itemPrice, itemImage) {
             <button class="btn btn-danger buttonDelete" type="button">X</button>
         </div>
         </div>
-    </div>
-    `;
+    </div>`;
     shoppingCartRow.innerHTML = shoppingCartContent;
-    shoppingCartItemsContainer.append(shoppingCartRow); 
+    shoppingCartItemsContainer.append(shoppingCartRow);
+    console.log(shoppingCartContent)
 }
 
 
