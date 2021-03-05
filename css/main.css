@@ -1,4 +1,4 @@
-section.productos{
+#store{
     height: 100%;
     width: 100%;
     display: flex;
@@ -38,13 +38,51 @@ section.productos{
 
   /* Boton Modal Carrito */
   .align-modal{
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filtroPrecio{
+    height: 40px;
+    margin: 35px;
+    padding: 10px;
+    border-radius: 30px;
   }
 
   .boton-modal {
-    padding: 10px 15px 10px 15px;
+    padding: 10px 20px 10px 26px;
     margin: 35px;
+    border-radius: 40px;
   }
   .icono-modal-carrito{
     padding: 5px 10px 5px 0px;
   }
+
+  .productoEnCarrito{
+    height: auto;
+    width: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Open Sans";
+    border-color: #000;
+    border-top-left-radius: 50px;
+  }
+
+  .productoEnCarrito-precio{
+    margin-top: 5px;
+  }
+  
+  .productoEnCarrito-boton{
+    background-color: blueviolet;
+    color: white;
+    width: 75px;
+    border: 0px;    
+    border-radius: 30px;
+  }
+
+.boton-login{
+  display: none;
+}

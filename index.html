@@ -9,6 +9,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <!-- Mis Estilos -->
     <link rel="stylesheet" href="css/main.css">
     <title>Tienda</title>
@@ -23,17 +26,57 @@
         </button>
     </nav>
     <header>
-        <div class="container">
+        <div id="bienvenidaUsuarioID" class="container">
             <h1 class="text-center">TIENDA</h1>
             <hr>
         </div>
     </header>
 
-    <!-- COMIENZO CARRITO -->
+<!-- LOGIN -->
+<div class="container">
+
+    <button id="modal-login" class="boton-login" type="button" data-toggle="modal"
+    data-target="#loginModal"></button>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">¡Bienvenid@!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="carrito-div" class="modal-body">
+                    <form action="" class="carrito-form-ingresar">
+                        <label for="nombreUsuario">Nombre</label>
+                        <input type="text" id="inputUsuario" class="form-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal">Comprar como invitad@</button>
+                    <button type="button" id="loginModal-boton" class="btn btn-success" data-dismiss="modal">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--  FIN LOGIN-->
+
+<!-- COMIENZO CARRITO -->
     <div class="container">
             <div class="align-modal">
-            <button class="btn btn-success boton-modal" data-toggle="modal" data-target="#ventana-modal"><i class="fas fa-shopping-bag icono-modal-carrito"></i>Sus compras</button>
-            </div>
+                <select class="filtroPrecio" name="Precios" id="selecPrecio">
+                    <option value="All">Todos los productos</option>
+                    <option value="Expensive">Mayor a $550</option>
+                    <option value="Standart">Entre $550y $400</option>
+                    <option value="Cheap">Menor de $400</option>
+                </select>
+
+            <button class="btn btn-success boton-modal" data-toggle="modal" data-target="#ventana-modal"><i class="fas fa-shopping-bag icono-modal-carrito"></i><span id="contadorCarrito">Tus productos</span></button>
+    </div>
     
             <div class="modal fade" id="ventana-modal" tabindex="-1" role="dialog" aria-labelledby="titulo-ventana" aria-hidden="true">
                 <div class="modal-dialog role="document">
@@ -47,16 +90,18 @@
                         <div class="modal-body">
                             <div id="carrito-contenedor"></div>
                         <div class="modal-footer">
+                            <p class="precioProducto">Total: $<span id="precioTotal"></span></p>
                             <button class="btn btn-outline-success" type="button" data-dismiss="modal">Seguir comprando</button>
                             <button class="btn btn-success" type="button">Comprar</button>
                         </div>
                     </div>
                 </div>  
             </div>
+           
         </div>
-    <!-- FIN CARRITO -->
+<!-- FIN CARRITO -->
 
-    <!-- INICIO SECCIÓN DE COMPRA -->
+<!-- INICIO SECCIÓN DE COMPRA -->
     <div class="container">
         <div class="row">
             <section id="store"></section>
@@ -113,14 +158,11 @@
             </div>
             <!-- FIN MODAL COMPRA -->
 
-
         </div>
 
     </section>
     <!-- FINAL CARRITO -->
 
-
-    
     <footer class="bg-dark p-3 mt-5">
         <p class="text-center m-0 text-muted">Tienda Sport</p>
     </footer>
