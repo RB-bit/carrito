@@ -83,7 +83,9 @@
     <h1 class="titulo-shop">SHOP</h1>
 
     <section class="video">
-      <video src="/video/video-nike-react-270.mp4" class="video-trailer" autoplay="true"></video>
+      <button onclick="playVid()" type="button">Play Presentación</button>
+      <button onclick="pauseVid()" type="button">Pausar Presentación</button>
+      <video id="myVideo" src="/video/video-nike-react-270.mp4" class="video-trailer"></video>
     </section>
 
     <div class="container">
@@ -190,6 +192,7 @@
     </template>
     <!-- Mi JS -->
     <script src="tienda.js"></script>
+    <script src="playvid.js"></script>
     <!-- MDB -->
     <script
     type="text/javascript"
