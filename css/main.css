@@ -1,88 +1,68 @@
-#store{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+body{
+  font-family: 'Roboto Condensed', sans-serif;
 }
-.item {
-    width: 350px;
-    border: 2px solid #000;
-    padding: 20px;
-    border-radius: 20px;
+
+/* NAVBAR */
+
+.logo{
+  height: 3%;
+  width: 3%;
+}
+
+@media screen and (max-width: 760px) {
+  .logo{
+    height: 15%;
+    width: 15%;
   }
-  
-  .item-title {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .item-image {
-    height: 300px;
-    width: 100%;
-  }
-  
-  .item-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0px 15px;
-  }
-  
-  .item-details > .item-price {
+}
+
+.background-gradient{
+  height: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+  background: rgb(188,5,158);
+  background: linear-gradient(45deg, rgba(188,5,158,1) 0%, rgba(255,171,49,1) 50%, rgba(86,55,220,1) 100%);
+}
+
+.logo-270{
+  height: 70%;
+  margin:0;
+  position: relative;
+  top: 310px;
+  right: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .logo-270{
+    height: 10rem;
+    width: 25rem;
     margin: 0;
+    position: relative;
+    top: 490px;
+    right: 10px;
   }
+}
 
-  /* Boton Modal Carrito */
-  .align-modal{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  background: -webkit-linear-gradient(354deg, rgba(188,5,158,1) 0%, rgba(255,171,49,1) 33%, rgba(86,55,220,1) 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .filtroPrecio{
-    height: 40px;
-    margin: 35px;
-    padding: 10px;
-    border-radius: 30px;
-  }
 
-  .boton-modal {
-    padding: 10px 20px 10px 26px;
-    margin: 35px;
-    border-radius: 40px;
-  }
-  .icono-modal-carrito{
-    padding: 5px 10px 5px 0px;
-  }
+.video{
+  height: 100%;
+  background-color: black;
+}
+.video-trailer{
+  height: 100vh;
+  width: 100%;
+}
 
-  .productoEnCarrito{
-    height: auto;
-    width: auto;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: "Open Sans";
-    border-color: #000;
-    border-top-left-radius: 50px;
-  }
 
-  .productoEnCarrito-precio{
-    margin-top: 5px;
-  }
-  
-  .productoEnCarrito-boton{
-    background-color: blueviolet;
-    color: white;
-    width: 75px;
-    border: 0px;    
-    border-radius: 30px;
-  }
-
-.boton-login{
-  display: none;
+footer{
+  margin-top: 30px;
 }

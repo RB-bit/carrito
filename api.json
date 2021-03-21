@@ -2,37 +2,37 @@
   {
     "precio": 500,
     "id": 1,
-    "title": "Café",
-    "thumbnailUrl": "img/airJordan.jpeg"
+    "title": "Nike React 270 Black",
+    "thumbnailUrl": "img/react-270-1.png"
   },
   {
     "precio": 300,
     "id": 2,
-    "title": "Pizza",
-    "thumbnailUrl": "https://picsum.photos/id/10/600"
+    "title": "Nike React 270 Bauhaus",
+    "thumbnailUrl": "img/react-270-2.png"
   },
   {
     "precio": 100,
     "id": 3,
-    "title": "Agua",
-    "thumbnailUrl": "https://picsum.photos/id/20/600"
+    "title": "Nike React 270 Black Agua",
+    "thumbnailUrl": "img/react-270-3.png"
   },
   {
     "precio": 50,
     "id": 4,
-    "title": "Sandía",
-    "thumbnailUrl": "https://picsum.photos/id/30/600"
+    "title": "Nike React 270 White",
+    "thumbnailUrl": "img/react-270-4.png"
   },
   {
-    "precio": 10,
+    "precio": 100,
     "id": 5,
-    "title": "Mango",
-    "thumbnailUrl": "https://picsum.photos/id/40/600"
+    "title": "Nike React 270 Reggae",
+    "thumbnailUrl": "img/react-270-5.png"
   },
   {
     "precio": 150,
     "id": 6,
-    "title": "Chela",
-    "thumbnailUrl": "https://picsum.photos/id/50/600"
+    "title": "Nike React 270 Pnk",
+    "thumbnailUrl": "img/react-270-6.png"
   }
 ]
