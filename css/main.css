@@ -53,6 +53,7 @@ h1 {
 }
 
 
+
 .video{
   height: 100%;
   background-color: black;
@@ -62,6 +63,51 @@ h1 {
   width: 100%;
 }
 
+.video-btn{
+  position: relative;
+  top: 900px;
+  left: 950px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .video-btn{
+    position: relative;
+    top: 150px;
+    left: 350px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .video-btn{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: white;
+  }
+}
 
 footer{
   margin-top: 30px;
