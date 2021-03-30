@@ -7,13 +7,11 @@ body{
 .logo{
   height: 3%;
   width: 3%;
+  z-index: 9999;
 }
 
-@media screen and (max-width: 760px) {
-  .logo{
-    height: 15%;
-    width: 15%;
-  }
+.navbar{
+  z-index: 999;
 }
 
 .background-gradient{
@@ -22,6 +20,7 @@ body{
   margin-bottom: 20px;
   background: rgb(188,5,158);
   background: linear-gradient(45deg, rgba(188,5,158,1) 0%, rgba(255,171,49,1) 50%, rgba(86,55,220,1) 100%);
+  z-index: 99;
 }
 
 .logo-270{
@@ -30,31 +29,30 @@ body{
   position: relative;
   top: 310px;
   right: 10px;
+  z-index: 999;
 }
 
-@media screen and (max-width: 760px) {
-  .logo-270{
-    height: 10rem;
-    width: 25rem;
-    margin: 0;
-    position: relative;
-    top: 490px;
-    right: 10px;
-  }
-}
+
 
 h1 {
+  position: relative;
   font-size: 72px;
   font-weight: 700;
   text-align: center;
-  background: -webkit-linear-gradient(354deg, rgba(188,5,158,1) 0%, rgba(255,171,49,1) 33%, rgba(86,55,220,1) 83%);
+  background: -webkit-linear-gradient(35deg, rgba(188,5,158,1) 0%, rgba(255,171,49,1) 33%, rgba(86,55,220,1) 83%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 999;
 }
 
+/* /////////////////
+  Video
+///////////////////*/
 
 
 .video{
+  position: relative;
+  z-index: 999;
   height: 100%;
   background-color: black;
 }
@@ -75,6 +73,118 @@ h1 {
   cursor: pointer;
   outline: inherit;
   color: white;
+}
+
+/* /////////////////
+  Productos
+///////////////////*/
+
+.producto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 300px;
+  overflow: hidden;
+}
+
+ .producto::before{
+  content:'';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(86,55,220,1)55%, rgba(255,171,49,1));
+  clip-path: circle(55% at 100% -20%);
+}
+
+.producto::after{
+  content:'';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(86,55,220,1), rgba(255,171,49,1) 25%);
+  clip-path: circle(35% at 0% 100%);
+}
+
+.producto__Container{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.producto__Container .producto__Card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  /* margin: 20px 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.producto__Container .producto__Card .producto__ImgBox{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+
+.producto__Card:hover .producto__ImgBox{
+  transform: translateY(-100px) scale(1.2) rotate(-20deg);
+}
+
+.producto__Container .producto__Card .producto__ImgBox .producto__ImgBox-img{
+  max-width: 100%;
+  margin: 0 0 40px;
+  transition: 0.5s ease-in-out;
+}
+
+/* .producto__Container .producto__Card {
+  color: white;
+  font-weight: 600;
+} */
+/* /////////////////
+  Footer
+///////////////////*/
+
+footer{
+  margin-top: 30px;
+  position: relative;
+  z-index: 999;
+}
+
+/* /////////////////
+  Media Queries
+///////////////////*/
+
+@media screen and (max-width: 760px) {
+  .logo{
+    height: 15%;
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .logo-270{
+    height: 10rem;
+    width: 25rem;
+    margin: 0;
+    position: relative;
+    top: 490px;
+    right: 10px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -107,8 +217,4 @@ h1 {
     outline: inherit;
     color: white;
   }
-}
-
-footer{
-  margin-top: 30px;
 }
